@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar title="{{source.name}}" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout>
+        <StackLayout padding="10">
+            <Label text="{{title}}" textWrap="true" class="title"/>
+        </StackLayout>
+        <StackLayout paddingTop="20" paddingBottom="20" paddingLeft="10">
+            <Label text="{{author}}" class="author"/>
+            <Label text="{{publishedAt}}" class="time"/>
+        </StackLayout>
+        <Image src="{{ urlToImage }}" stretch="aspectFill" height="200" />
+        <StackLayout padding="15">
+            <Label text="{{description}}" textWrap="true"/>
+        </StackLayout>
+    </StackLayout>
+</Page>

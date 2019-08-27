@@ -1,0 +1,25 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar title="Latest News" icon="" class="action-bar">
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout>
+        <ListView id="list-view"  items="{{allNews}}" itemTap="{{onItemTap}}">
+            <ListView.itemTemplate>
+                <StackLayout>
+                    <GridLayout rows="*" columns="*">
+                        <Image src="{{ urlToImage }}" stretch="aspectFill" height="200" />
+                        <GridLayout verticalAlignment="top">
+                            <StackLayout backgroundColor="#bc3b4e77">
+                                <Label text="{{ source.name }}" color="white"/>
+                            </StackLayout>
+                        </GridLayout>
+                    </GridLayout>
+                    <StackLayout paddingTop="5" paddingBottom="15" paddingLeft="10" paddingRight="10" backgroundColor="#E9EAED">
+                        <Label text="{{ title }}" textWrap="true" />
+                    </StackLayout>
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>
